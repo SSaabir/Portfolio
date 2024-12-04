@@ -7,10 +7,12 @@ import Skills from './sections/Skills'
 export default function App() {
   return (
     <BrowserRouter>
+    <div className='bg-black bg-hero-pattern bg-cover bg-center min-h-screen'>
     <Header />
     <Home />
     <About />
     <Skills />
+    </div>
     </BrowserRouter>
   )
 }

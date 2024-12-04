@@ -7,15 +7,13 @@ import React from 'react'
 export default function Header() {
     const path= useLocation().pathname;
   return ( 
-    <Navbar className='bg-transparent'>
-    <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
+    <Navbar className='bg-transparent text-white'>
+    <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold'>
     <span>Saabir Siraaj</span>
     </Link>
    
-    <div className='flex gap-2 md:order-2'>
-        <Button className='w-12 h-10 hidden sm:inline' color='gray' pill>
-            <FaMoon/>
-        </Button>
+    <div className='flex gap-2 md:order-2 text-white'>
+       
             
         <Navbar.Toggle/>
     </div>
@@ -23,7 +21,7 @@ export default function Header() {
             <Navbar.Link active={path=="/"} as={'div'}>
                 <Link to='/'>Home</Link>
             </Navbar.Link>
-            <Navbar.Link active={path=="/about"} as={'div'}>
+            <Navbar.Link active={path=="/#about"} as={'div'}>
                 <Link to='/about'>About</Link>
             </Navbar.Link>
             <Navbar.Link active={path=="/skills"} as={'div'}>

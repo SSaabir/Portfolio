@@ -7,7 +7,11 @@ export default {
     flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./images/topography.svg')"
+      },
+    },
   },
   plugins: [
     flowbite.plugin(),
