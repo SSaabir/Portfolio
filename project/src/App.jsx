@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Home from './sections/home'
 import About from './sections/About'
 import Skills from './sections/Skills'
+import { Project } from './sections/project'
+import { Contact } from './sections/contact'
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,6 +14,8 @@ export default function App() {
     <Home />
     <About />
     <Skills />
+    <Project />
+    <Contact />
     </div>
     </BrowserRouter>
   )
