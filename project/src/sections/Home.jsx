@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import avatha from '../images/pro.png'
 
 export default function Home() {
   return (
@@ -9,12 +10,10 @@ export default function Home() {
     >
       <div className="text-left max-w-screen-lg">
         <h1 className="text-5xl lg:text-7xl font-extrabold text-teal-400">
-          Software Engineer
+        Hi, I'm Siraaj Saabir
         </h1>
         <p className="mt-4 text-lg font-medium text-gray-200">
-          Resolving design problems, building smart user interfaces and useful
-          interactions, developing rich web applications and seamless web
-          experiences.
+          Data Science Undergraduate | Web Developer
         </p>
         <HashLink
           smooth
@@ -26,7 +25,9 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center">
         {/* Replace the span with an image or graphic */}
-        <span className="bg-teal-500 w-40 h-40 rounded-full shadow-lg"></span>
+        <span className="bg-yellow-400 w-72 h-72 rounded-full shadow-lg">
+          <img src={avatha} alt="figure" className="rounded-full bg-hero-pattern"/>
+        </span>
       </div>
     </section>
   );

@@ -8,25 +8,24 @@ export default function About() {
     >
       <div className="flex-1 text-left">
         <h2 className="text-6xl font-bold text-teal-400">
-          Hi, I'm Saabir <br /> <span className="text-teal-300">Web Developer</span>
+          About<span className="text-teal-300"> Me</span>
         </h2>
+       
         <p className="mt-4 text-xl font-medium text-gray-300">
-          Full Stack Developer / Experienced Backend Developer
-        </p>
+        Hi! I’m a software engineer with a passion for solving design problems and building seamless web applications.</p>
       </div>
       <div className="flex-1 space-y-4">
-        <p className="text-lg text-gray-200">
-          Professionally connected with the web development industry.
-        </p>
-        <p className="text-lg text-gray-200">
-          Problem solver, well-organized person, and loyal employee with high attention to detail.
-        </p>
-        <p className="text-lg text-gray-200">
-          Fan of Boxing, outdoor activities, video games, and coding of course.
-        </p>
-        <p className="text-lg text-gray-200">
-          Interested in the entire frontend spectrum and working on ambitious projects with interesting people.
-        </p>
+      <ul className='list-disc list-inside text-gray-700 space-y-2 text-justify'>
+        <li className='text-lg text-gray-200'>
+          Problem solver, well-organized person, Deep Worker, and loyal employee with high attention to detail.
+          </li>
+        <li className='text-lg text-gray-200'>
+          Fan of Formula 1, UFC, outdoor activities, video games, and coding of course.
+        </li>
+        <li className='text-lg text-gray-200'>
+        Interested in the entire frontend and backend spectrum and love to work on ambitious projects with interesting people.
+        </li>
+        </ul>
       </div>
     </section>
   );

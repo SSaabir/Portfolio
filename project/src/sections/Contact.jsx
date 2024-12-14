@@ -7,7 +7,7 @@ export const Contact = () => {
       className="h-screen flex flex-col lg:flex-row items-center justify-between py-12 px-8 lg:px-32 bg-gradient-to-b from-gray-800 to-gray-700"
       id="contact"
     >
-      {/* Text Section */}
+      
       <div className="flex-1 text-left max-w-lg">
         <h2 className="text-5xl font-bold text-teal-400">Contact Me</h2>
         <p className="mt-4 text-lg text-gray-300">
@@ -17,11 +17,11 @@ export const Contact = () => {
         <div className="mt-6 space-y-4">
           <div className="text-lg text-gray-200">
             <span className="font-semibold text-teal-400">Email:</span> 
-            <span className="ml-2">example@email.com</span>
+            <span className="ml-2">siraajsaabir@email.com</span>
           </div>
           <div className="text-lg text-gray-200">
             <span className="font-semibold text-teal-400">Phone:</span> 
-            <span className="ml-2">+123 456 7890</span>
+            <span className="ml-2">+94 77 371 0347</span>
           </div>
         </div>
       </div>

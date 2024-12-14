@@ -22,12 +22,10 @@ export default function Skills() {
           Skills & Experience
         </h2>
         <p className="text-lg font-medium text-gray-300">
-          "A problem is a chance for you to do your best."
+          "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." <br /> – Martin Fowler, Refactoring
         </p>
         <p className="text-gray-400">
-          My main expertise lies in front-end development, creating responsive
-          layouts with React, Vue, and building rich user interfaces.
-        </p>
+        My main focus lies in back-end development, working with technologies like Node.js and Python to build and manage server-side solutions. I aim to create efficient and scalable back-end systems that support seamless integration with front-end applications.</p>
         <p className="text-gray-400">
           Visit my{' '}
           <Link

@@ -9,7 +9,7 @@ import { Contact } from './sections/contact'
 export default function App() {
   return (
     <BrowserRouter>
-    <div className='bg-black bg-hero-pattern bg-cover bg-center min-h-screen'>
+    <div className='bg-black'>
     <Header />
     <Home />
     <About />
