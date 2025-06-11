@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import Home from './sections/home'
+import Home from './sections/Home'
 import About from './sections/About'
 import Skills from './sections/Skills'
-import { Project } from './sections/project'
-import { Contact } from './sections/contact'
+import  Project  from './sections/Project'
+import  Contact  from './sections/Contact'
 export default function App() {
   return (
     <BrowserRouter>
