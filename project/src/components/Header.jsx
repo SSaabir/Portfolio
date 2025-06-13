@@ -8,13 +8,13 @@ export default function Header() {
 
   return (
     <Navbar
-      className="bg-gray-900 text-white fixed w-full z-50 shadow-md"
+      className="bg-transparent text-white absolute w-5 z-50 shadow-md"
       fluid={true}
       rounded={true}
     >
       <Navbar.Brand>
         <Link to="/" className="self-center text-xl font-semibold whitespace-nowrap text-teal-400">
-          Saabir Siraaj
+          
         </Link>
       </Navbar.Brand>
 
