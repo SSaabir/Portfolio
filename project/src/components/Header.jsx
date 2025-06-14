@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import brand from '../images/brand.png'
 import React, {useState} from 'react';
 export default function Header() {
