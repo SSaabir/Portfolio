@@ -23,7 +23,7 @@ export default function Header() {
             className="text-xl font-semibold text-white hover:text-orange-400 transition-colors duration-200"
           >
             <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+              <img src={brand} alt="brand" className='rounded'/>
             </div>
           </button>
           
