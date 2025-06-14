@@ -1,42 +1,71 @@
-import { Navbar } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import React from 'react';
-
+import { Menu } from 'lucide-react';
+import brand from '../images/brand.png'
+import React, {useState} from 'react';
 export default function Header() {
-  const path = useLocation().pathname;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
-    <Navbar
-      className="bg-transparent text-white absolute w-5 z-50 shadow-md"
-      fluid={true}
-      rounded={true}
-    >
-      <Navbar.Brand>
-        <Link to="/" className="self-center text-xl font-semibold whitespace-nowrap text-teal-400">
+    <nav className="bg-[#2D2D2A]/95 backdrop-blur-sm text-white fixed w-full z-50 shadow-lg border-b border-orange-500/20">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          <button 
+            onClick={() => scrollToSection('home')} 
+            className="text-xl font-semibold text-white hover:text-orange-400 transition-colors duration-200"
+          >
+            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-400 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">S</span>
+            </div>
+          </button>
           
-        </Link>
-      </Navbar.Brand>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8">
+            {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="text-white/80 hover:text-orange-400 transition-colors duration-200 capitalize font-medium"
+              >
+                {section}
+              </button>
+            ))}
+          </div>
 
-      <Navbar.Toggle />
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white hover:text-orange-400 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
-      <Navbar.Collapse className="gap-4">
-        <HashLink smooth to="#home" className="hover:text-teal-400">
-          Home
-        </HashLink>
-        <HashLink smooth to="#about" className="hover:text-teal-400">
-          About
-        </HashLink>
-        <HashLink smooth to="#skills" className="hover:text-teal-400">
-          Skills
-        </HashLink>
-        <HashLink smooth to="#projects" className="hover:text-teal-400">
-          Projects
-        </HashLink>
-        <HashLink smooth to="#contact" className="hover:text-teal-400">
-          Contact
-        </HashLink>
-      </Navbar.Collapse>
-    </Navbar>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 py-4 border-t border-orange-500/20">
+            <div className="flex flex-col space-y-4">
+              {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="text-white/80 hover:text-orange-400 transition-colors duration-200 capitalize font-medium text-left"
+                >
+                  {section}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
